@@ -1,20 +1,19 @@
 ﻿/*Base header*/
 header{
+    width:75%;
     position:fixed;
     top:0%;
-    padding-left:20%;
+    padding-right:20%;
     display:inline;
-    width:75%;
     font-size:250%;
     transition:all 0.4s ease;/*all=  what is affected(highet width) then time and then speed of animation*/
 }
 /*Scrolled header*/
 header.sticky {
-        padding-left:0%;
         background: white;
         width: 100%;
         font-size: 150%;
-        
+        padding-right:0%;
 }
 /*Drop down design*/
 #cuPage{
@@ -22,13 +21,14 @@ header.sticky {
     color:black;
 }
   ul {
+      padding-right:0;
       list-style: none;
       margin: 0;
       
   }
   ul li {
       display: block;
-      float: left;
+      float: right;
 
   }
   li ul {
@@ -39,22 +39,23 @@ header.sticky {
   ul li a {
       display: block;
       background: white;
-      padding-right:40px;
+      padding-left:40px;
       padding-bottom:0px;
       text-decoration: none;
       white-space: nowrap;
       color:black;
   }
+  /**/
   ul li a:hover {
       background: white;
   }
   li:hover ul {
       display: block; 
-      position: absolute;
+      position: absolute;/*Sets it by the first set position*/
 
   }
   li:hover li {
-      float: none;
+      float: none;/*How the list shows on hovring*/
   }
   li:hover a {
       background: white;
@@ -71,12 +72,14 @@ header.sticky {
   /*General design*/
 body{
     padding-top:3%;
-    
-    margin-right:5%;
+    margin-left:5%;
+    margin-right:2%;
+    direction:rtl;
 }
 p{
     width:90%;
-    margin-left:5%;
+    margin:5%;
+    font-size:xx-large;
 }
 footer{
     margin:40px
@@ -93,7 +96,7 @@ a.back-to-top {
 	text-indent: -9999px;/*Removing space from somewhere*/
 	position: fixed;
 	z-index: 999;/*Place the img based on z*/
-	right: 20px;
+	left: 20px;
 	bottom: 20px;
 	background: #27AE61 url("Pics/up-arrow.png") no-repeat center 43%;/*Setting the BG for the button*/
 	border-radius: 30px;
