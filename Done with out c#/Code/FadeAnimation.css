@@ -1,0 +1,82 @@
+﻿html,body {
+    animation-name:PageFade;
+    animation-duration:1s
+}
+@keyframes PageFade {
+    0% {
+        opacity: 0;
+    }
+    5% {
+        opacity: .05;
+    }
+
+    10% {
+        opacity: .1;
+    }
+    15% {
+        opacity: .15;
+    }
+
+    20% {
+        opacity: .2;
+    }
+    25% {
+        opacity: .25;
+    }
+
+    30% {
+        opacity: .3;
+    }
+    35% {
+        opacity: .35;
+    }
+
+    40% {
+        opacity: .4;
+    }
+    45% {
+        opacity: .45;
+    }
+    50% {
+        opacity: .5;
+    }
+    55% {
+        opacity: .55;
+    }
+
+    60% {
+        opacity: .6;
+    }
+    65% {
+        opacity: .65;
+    }
+
+    70% {
+        opacity: .7;
+    }
+    75% {
+        opacity: .75;
+    }
+    80%{
+        opacity:.8
+    }
+    85% {
+        opacity: .85;
+    }
+    90%{
+        opacity:.9
+    }
+    95% {
+        opacity: .95;
+    }
+    100%{
+        opacity:1
+    }
+}
+a{
+    text-decoration:none;
+    color:black;
+}
+a:active{
+    color:black;
+}

@@ -1,0 +1,133 @@
+﻿<%@ Master Language="C#" AutoEventWireup="true" CodeFile="Main.master.cs" Inherits="Main" %>
+
+<!DOCTYPE html>
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+
+    <asp:ContentPlaceHolder ID="head" runat="server">
+    </asp:ContentPlaceHolder>
+</head>
+<body>
+    <%-- Back to top script--%>
+    <script>
+        //Back to the top button show/hide
+        var amountScrolled = 15;
+
+        $(window).scroll(function () {
+            if ($(window).scrollTop() > amountScrolled) { //Cheking if you scrolled more then 300(defined as amountScrolled)
+                $('a.back-to-top').fadeIn('slow');//Slow is defind speed a.back-to-top is a css calss that is custom made
+            } else {
+                $('a.back-to-top').fadeOut('slow');
+            }
+        });
+        //Back to the top animation
+        $('a.back-to-top').click(function () {//Checkig if you pressed the button
+            $('html, body').animate({//Animitaing the html and the body tags
+                scrollTop: 0 //Taking you to the top of the page 
+            }, 700);//700 is how is the animation
+            return false;
+        });
+    </script>
+    <%--Header script--%>
+    <script>
+        //Scrolled header
+        $(window).scroll(function () {
+            if ($(this).scrollTop() > 1) {//Check if the page as been scrolled 
+                $('header').addClass("sticky");
+                $('.msHeader').addClass("sticky");
+                $('.cmHeader').addClass("sticky");
+                $('.mmHeader').addClass("sticky");
+                $('.signin').addClass("sticky");
+                $('.rmHeader').addClass("sticky");
+            }
+            else {
+                $('header').removeClass("sticky");
+                $('.msHeader').removeClass("sticky")
+                $('.cmHeader').removeClass("sticky")
+                $('.mmHeader').removeClass("sticky")
+                $('.signin').removeClass("sticky")
+                $('.rmHeader').removeClass("sticky")
+            }
+        });
+    </script>
+    <%--Clock--%>
+    <script>
+        setInterval("myTimer()", 1000);
+        function myTimer() {
+            var d = new Date();
+            var h = d.getHours();
+            var m = d.getMinutes();
+            var s = d.getSeconds();
+            m = checkTime(m);
+            s = checkTime(s);
+            document.getElementById("Clock").innerHTML = h + ":" + m + ":" + s;
+            function checkTime(i) {
+                if (i < 10) {
+                    i = "0" + i;
+                }
+                return i;
+            }
+        }
+    </script>
+
+
+    <div id="Drop">
+        <header>
+            <ul id="drop-nav">
+
+               
+                <li class="rmHeader"><a class="Remove" href="Rock.aspx">רוק</a>
+                    <ul>
+                        <li><a href="Rock.aspx#First">רקע על הסגנון</a></li>
+                        <li><a href="Rock.aspx#Second">רוק בישראל</a></li>
+                        <li><a href="Rock.aspx#Third">האומנים המשפיעים ביותר</a></li>
+                    </ul>
+                    
+                    <li class="signin"><a class="Remove" href="Login N register master.aspx">התחברות</a></li>
+                    <li class="msHeader"><a href="Music.aspx" class="Remove">מוזיקה</a>
+                        <ul>
+                            <li><a href="Music.aspx#mFirst">רקע</a></li>
+                            <li><a href="Music.aspx#mSecond">ג'אז</a></li>
+                            <li><a href="Music.aspx#mThird">תיווי</a></li>
+                            <li><a href="SlideShow.aspx">גלריית תמונות</a><li>
+                            
+                            
+                        </ul>
+                  
+                        
+                    <li class="cmHeader"><a class="Remove" href="Classic.aspx">קלאסי</a>
+                        <ul>
+                            <li><a href="Classic.aspx#First">רקע על הסגנון</a></li>
+                            <li><a href="Classic.aspx#Second">היבטים חברתיים</a></li>
+                            <li><a href="Classic.aspx#gThird">אומנים משפיעים</a></li>
+                        </ul>
+                        <li class="mmHeader"><a class="Remove" href="Metal.aspx">מטאל</a>
+                            <ul>
+                                <li><a href="Metal.aspx#First">רקע על הסגנון</a></li>
+                                <li><a href="Metal.aspx#Second">מקור המונח</a></li>
+                                <li><a href="Metal.aspx#Third">אומנים משפיעים</a></li>
+                            </ul>
+        </header>
+    </div>
+    <div>
+        <asp:ContentPlaceHolder ID="ContentPlaceHolder1" runat="server">
+        </asp:ContentPlaceHolder>
+    </div>
+    <!--Back to top button image-->
+    <a href="#" class="back-to-top"></a>
+        <footer>
+
+            <div id="Contact">
+                <a href=" mailto:scsaar@gmail.com" class="Login">צור קשר</a>
+            </div>
+            <div id="madeBy">
+                <p>נוצר על ידי סער שוורץ</p>
+            </div>
+            <div id="ClockMove">
+                <p id="Clock"></p>
+            </div>
+        </footer>
+  
+</body>
+</html>

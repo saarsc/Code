@@ -1,0 +1,428 @@
+﻿
+/*Back to top button*/
+a.back-to-top {
+    display: none;
+    width: 60px;
+    height: 60px;
+    text-indent: -9999px; /*Removing space from somewhere*/
+    position: fixed;
+    z-index: 999; /*make it the top layer*/
+    left: 20px;
+    bottom: 20px;
+    background: #27AE61 url("../../Pics/up-arrowTest.png") no-repeat center 43%; /*Setting the BG for the button*/
+    border-radius: 30px;
+}
+/*Images + Close big image*/
+#X {
+    display: none;
+    position: absolute;
+}
+
+.Text {
+    background: blue;
+}
+/*Base design*/
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+/*Drop down design*/
+
+header {
+    /*background-image: url(../../Pics/bg.jpg);*/
+    width: 100%;
+    margin-bottom: 5%;
+    z-index: 999;
+    direction: rtl;
+}
+
+#Drop {
+    width: 100%;
+}
+
+#cuPage {
+    font-weight: bold;
+    color: black;
+}
+
+header ul {
+    /*padding-left:20%;
+    padding-right: 0;*/
+    list-style: none;
+    margin: 0;
+}
+
+    header ul li {
+        display: block;
+        float: right;
+    }
+
+header li ul {
+    display: none;
+    font-size: x-large;
+}
+
+header ul li a {
+    display: block;
+    background-image: url(../../Pics/bg.jpg);
+    /*padding-left: 20px;*/
+    padding-bottom: 10px;
+    text-decoration: none;
+    white-space: nowrap;
+    color: black;
+}
+
+    header ul li a:hover {
+        background: rgba(239,246,255,1);
+    }
+
+header li:hover ul {
+    display: block;
+    position: absolute; /*Sets it by the first set position*/
+    z-index:999;
+}
+
+header li:hover li {
+    z-index:999;
+    float: none; /*How the list shows on hovring*/
+}
+
+    header li:hover li a:hover {
+        background: #19B5FE;
+    }
+
+#drop-nav li ul li {
+    border-top: 0px;
+}
+/*footer stuff*/
+footer {
+    width: 100% !important;
+    border-top: black solid 1px;
+    direction: rtl;
+    font-size: 200%;
+    padding-right: 0% !important;
+    margin-top: 2%;
+    margin-bottom: 2%;
+}
+
+
+    footer div {
+        position: absolute;
+        display: inline;
+        padding-right: 0% !important;
+    }
+
+    footer #ClockMove {
+        right: 80%;
+    }
+
+    footer #madeBy {
+        right: 40%;
+    }
+
+#Contact {
+    /*margin-top:2%;*/
+    padding-top: 2% !important;
+    /*position:absolute;
+    display:inline;*/
+    /*background:rgba(203,236,253,.7);*/
+    /*z-index:100;*/
+    /*margin-bottom:0;*/
+    /*margin-right:0 !important;*/
+    /*font-size:200%;*/
+    /*padding:1% 50% 100% 50%;
+    padding-right:20%;*/
+    right: 10%;
+}
+
+/*Base header*/
+header {
+    /*direction: rtl;*/
+    /*width: 75%;*/
+    position: fixed;
+    top: 0%;
+    /*padding-right: 20%;*/
+    display: inline;
+    font-size: 250%;
+    transition: all 0.4s ease; /*all=  what is affected(height width) then time and then speed of animation*/
+}
+    /*Scrolled header*/
+    header.sticky {
+        background: rgba(239,244,250,.8);
+        width: 100%;
+        font-size: 200%;
+        padding-right: 0% !important;
+    }
+
+.signin.sticky {
+    transition: all 0.2s ease;
+    right: 10%;
+    background: background: rgba(239,244,250,.8) !important;
+}
+
+.msHeader.sticky {
+    transition: all 0.2s ease;
+    right: 20%;
+    background: rgba(239,244,250,.8) !important;
+}
+
+.cmHeader.sticky {
+    transition: all 0.2s ease;
+    right: 30%;
+    background: rgba(239,244,250,.8) !important;
+}
+
+.mmHeader.sticky {
+    transition: all 0.2s ease;
+    right: 40%;
+    background: rgba(239,244,250,.8) !important;
+}
+
+.rmHeader.sticky {
+    transition: all 0.2s ease;
+    background: rgba(239,244,250,.6) !important;
+}
+
+
+
+body {
+    direction: rtl;
+    overflow-x: hidden;
+    /*font-size:200%;*/
+    background-image: url(../../Pics/bg.jpg);
+}
+/*Base pages text*/
+#pages h1 {
+    position: absolute;
+    right: 50%;
+}
+
+#pages #pFirst, #pSecond, #pThird, table {
+    margin-top: 20%;
+    margin-bottom: 10%;
+    font-size: x-large;
+}
+/*Metal headers*/
+#mhFirst {
+    top: 25%;
+}
+
+#mhSecond {
+    top: 70%;
+}
+
+#mtHeader {
+    top: 200%;
+    right: 45% !important;
+}
+/*Classic headers*/
+#chFirst {
+    top: 15%;
+}
+
+#chSecond {
+    top: 80%;
+}
+
+#chTable {
+    right: 40% !important;
+    top: 145%;
+}
+/*Rock headers*/
+#rhFirst {
+    top: 15%;
+}
+
+#rhSecond {
+    top: 105%;
+}
+
+#rhTable {
+    right: 30%;
+    top: 240%;
+}
+
+table, tr, td {
+    position: relative;
+    right: 4px;
+}
+/*Music Header*/
+#fHeader {
+    position: absolute;
+    top: 20%;
+}
+/*td{
+    position:absolute;
+    /*right:2px;*/
+/*line-height:20px;*/
+}
+/*Main header places*/
+.rmHeader {
+    position: absolute;
+    right: 5% !important;
+}
+
+.signin {
+    position: absolute;
+    right: 15%;
+}
+
+.msHeader {
+    position: absolute;
+    right: 50%;
+}
+
+.cmHeader {
+    position: absolute;
+    left: 25%;
+}
+
+.mmHeader {
+    position: absolute;
+    left: 10%;
+    /*padding-left: 0 !important;*/
+}
+/*Removing the background from the header*/
+.Remove {
+    background: none !important;
+}
+/*Hidden anchors*/
+/*Music*/
+.mFirst {
+    position: absolute;
+    top: 17%;
+}
+
+.mSecond {
+    position: absolute;
+    top: 60%;
+}
+
+.mThird {
+    position: absolute;
+    top: 130%;
+}
+/*Metal*/
+.meFirst {
+    position: absolute;
+    top: 15%;
+}
+
+.meSecond {
+    position: absolute;
+    top: 65%;
+}
+
+.meThird {
+    position: absolute;
+    top: 190%;
+}
+/*Classic*/
+.cFirst {
+    position: absolute;
+    top: 10%;
+}
+
+.cSecond {
+    position: absolute;
+    top: 60%;
+}
+
+.cThird {
+    position: absolute;
+    top: 125%;
+}
+
+.rFirst {
+    position: absolute;
+    top: 5%;
+}
+
+.rSecond {
+    position: absolute;
+    top: 85%;
+}
+
+.rThird {
+    position: absolute;
+    top: 210%;
+}
+
+/*Hrs*/
+hr {
+    position: absolute;
+}
+/*Music*/
+.bgMusic {
+    top: 30%;
+    width: 15%;
+    right: 43%;
+}
+
+.Jazz {
+    top: 92%;
+    width: 10%;
+    right: 46%;
+}
+
+.Tabs {
+    top: 160%;
+    width: 10%;
+    right: 47%;
+}
+/*Meatl*/
+.meBg {
+    width: 20%;
+    top: 35%;
+    right: 45%;
+}
+
+.meSource {
+    top: 80%;
+    right: 48%;
+    width: 15%;
+}
+
+.meTable {
+    top: 210%;
+    right: 41%;
+    width: 30%;
+}
+/*Classic*/
+.cBg {
+    top: 25%;
+    right: 48%;
+    width: 17%;
+}
+
+.cSocial {
+    top: 90%;
+    right: 47%;
+    width: 20%;
+}
+
+.cArtist {
+    top: 155%;
+    right: 39%;
+    width: 25%;
+}
+/*Rock*/
+.rBg {
+    top: 25%;
+    width: 15%;
+    right: 48%;
+}
+
+.Israel {
+    top: 115%;
+    right: 47%;
+    width: 15%;
+}
+
+.rTable {
+    top: 250%;
+    right: 45%;
+    width: 30%;
+}

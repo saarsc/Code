@@ -1,0 +1,59 @@
+﻿
+  /*General design*/
+body{
+    padding-top:3%;
+    margin-left:5%;
+    margin-right:2%;
+    direction:rtl;
+   
+}
+/*p{
+    width:90%;
+    margin:5%;
+    font-size:xx-large;
+}
+*/
+a{
+    color:black;
+    text-decoration:none;
+}
+
+#SlideShow img {
+    position:absolute;
+}
+#NextButton{
+    position:absolute;
+}
+#BackButton{
+    position:absolute;
+}
+#ShortText{
+    position:absolute;
+    background-color: rgba(255, 255, 255,.6);
+    
+}
+#MetalInfo,#RockInfo,#ClassicInfo{
+    display:none;
+    position:absolute;
+  
+
+}
+#ClassicMain:hover{
+    position:relative;
+    top:-200px;
+    background-color: rgba(255, 255, 255,.6);
+    margin-bottom:0px
+}
+
+#ClassicMain:hover + #ClassicInfo {
+    position:relative;
+    top:-300px;
+    display:inline-block;
+ background-color: rgba(255, 255, 255,.6);
+}
+#RockMain:hover + #RockInfo {
+    display:inline-block;
+}
+#MetalMainMain:hover + #MetalInfo {
+    display:inline-block;
+}
